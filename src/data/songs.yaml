@@ -1,0 +1,721 @@
+songs:
+  - title: "Say It Ain't So"
+    artist: "Weezer"
+    slug: "say-it-aint-so"
+    key: "C#m"
+    tempo: 76
+    tuning: "Eb standard (half step down)"
+    sections:
+      - name: "Intro"
+        type: intro
+        chords: "C#m  G#  A  E (x4)"
+        tabs:
+          lead: |
+            e|---4-----------4----------0-----------0----------|
+            B|---4h5-5--x----5----------0-----------0----------|
+            G|---4----4--x---6----------1-----------1----------|
+            D|---4h6-----x---6----------2-----------2----------|
+            A|---4----------6-----------2-----------2----------|
+            E|--------4-----4-----------0-----------0----------|
+        drummer: "Count in. Soft hi-hat, kick on 1 and 3. Build gradually."
+      - name: "Verse 1"
+        type: verse
+        lyrics: |
+          [C#m]Somebody's Heine is [G#]crowding my icebox
+          [A]Somebody's cold one is [E]giving me chills
+          [C#m]Guess I'll just close my [G#]eyes
+          [A]  [E]
+        drummer: "Steady hi-hat 8ths, kick on 1 and 3, snare on 2 and 4"
+      - name: "Verse 2"
+        type: verse
+        lyrics: |
+          [C#m]Oh yeah [G#]
+          [A]Alright [E]
+          [C#m]Feels good [G#]
+          [A]Inside [E]
+        drummer: "Same pattern, slightly louder"
+      - name: "Verse 3"
+        type: verse
+        lyrics: |
+          [C#m]Flip on the tele, [G#]wrestle with Jimmy
+          [A]Something is bubbling [E]behind my back
+          [C#m]The bottle is ready to [G#]blow
+          [A]  [E]
+      - name: "Chorus 1"
+        type: chorus
+        lyrics: |
+          [C#m]Say it ain't [G#]so
+          [A]Your drug is a [E]heartbreaker
+          [C#m]Say it ain't [G#]so
+          [A]My love is a [E]life taker
+        drummer: "Open hi-hat, driving beat. Crash on 'Say it ain't so'"
+      - name: "Verse 4"
+        type: verse
+        lyrics: |
+          [C#m]I can't confront you, [G#]I never could do
+          [A]That which might hurt you, so [E]try and be cool
+          [C#m]When I say, [G#]this way is a waterslide away from me
+          [A]That takes you further every [E]day, hey
+          [C#m]So be cool [G#]
+          [A]  [E]
+      - name: "Chorus 2"
+        type: chorus
+        lyrics: |
+          [C#m]Say it ain't [G#]so
+          [A]Your drug is a [E]heartbreaker
+          [C#m]Say it ain't [G#]so
+          [A]My love is a [E]life taker
+      - name: "Bridge"
+        type: bridge
+        lyrics: |
+          [B]Dear Daddy, [B/A#]I write you
+          [E]In spite of [G#]years of silence
+          [B]You've cleaned up, [B/A#]found Jesus
+          [E]Things are good or [G#]so I hear
+          [B]This bottle [B/A#]of Steven's
+          [E]Awakens ancient [G#]feelings
+          [B]Like father, [B/A#]stepfather
+          [E]The son is drowning [G#]in the flood
+        drummer: "Half-time feel. Heavy snare on 3. Build intensity through section."
+      - name: "Solo"
+        type: solo
+        chords: "C#m  G#  A  E (x4)"
+        tabs:
+          lead: |
+            e|--12b14-12--9--12b14-12--9--12b14-12--9--7--9--7--|
+            B|--------------------------------------10----------|
+            G|-------------------------------------------------|
+            D|-------------------------------------------------|
+            A|-------------------------------------------------|
+            E|-------------------------------------------------|
+        drummer: "Full open hats, driving. Crash accents on chord changes."
+      - name: "Final Chorus"
+        type: chorus
+        lyrics: |
+          [C#m]Say it ain't [G#]so
+          [A]Your drug is a [E]heartbreaker
+          [C#m]Say it ain't [G#]so
+          [A]My love is a [E]life taker
+          [C#m]Say it ain't [G#]so-oh-oh
+          [A]Your drug is a [E]heartbreaker
+          [C#m]Say it ain't [G#]so
+          [A]My love is a [E]life taker
+        drummer: "All out. Crash on every chord change. Driving 8ths on kick."
+      - name: "Outro"
+        type: outro
+        chords: "C#m  G#  A  E (fade out)"
+        drummer: "Ride out with crashes. Follow guitar dynamics for ending."
+
+  - title: "Under the Bridge"
+    artist: "Red Hot Chili Peppers"
+    slug: "under-the-bridge"
+    key: "E major"
+    tempo: 68
+    sections:
+      - name: "Intro"
+        type: intro
+        chords: "D  F#m  E (fingerpicked)"
+        tabs:
+          lead: |
+            e|--2---2---2---2---2---2---2---2--|
+            B|--3---3---3---3---2---2---0---0--|
+            G|--2---2---2---2---2---2---1---1--|
+            D|--0---0---0---0---4---4---2---2--|
+            A|-----------------4---4---2---2--|
+            E|-------------------------------0--|
+        drummer: "No drums in intro. Enter softly at verse 1."
+      - name: "Verse 1"
+        type: verse
+        lyrics: |
+          [E]Sometimes I feel like I [B]don't have a partner
+          [C#m]Sometimes I feel like [G#m]my only friend
+          [A]Is the city I [Am]live in, the [E]city of angels
+          [E]Lonely as I am, to[B]gether we cry
+        drummer: "Light ride cymbal, ghost notes on snare. Very subtle."
+      - name: "Verse 2"
+        type: verse
+        lyrics: |
+          [E]I drive on her streets cause [B]she's my companion
+          [C#m]I walk through her hills cause [G#m]she knows who I am
+          [A]She sees my good deeds and [Am]she kisses me [E]windy
+          [E]I never worry, now [B]that is a lie
+      - name: "Chorus"
+        type: chorus
+        lyrics: |
+          [F#m]I don't ever want to [E]feel
+          [F#m]Like I did that [E]day
+          [F#m]Take me to the place I [E]love
+          [F#m]Take me all the [E]way
+        drummer: "Full beat kicks in. Snare on 2 and 4. Open hi-hat."
+      - name: "Verse 3"
+        type: verse
+        lyrics: |
+          [E]It's hard to believe that [B]there's nobody out there
+          [C#m]It's hard to believe that [G#m]I'm all alone
+          [A]At least I have her [Am]love, the [E]city she loves me
+          [E]Lonely as I am, to[B]gether we cry
+      - name: "Chorus 2"
+        type: chorus
+        lyrics: |
+          [F#m]I don't ever want to [E]feel
+          [F#m]Like I did that [E]day
+          [F#m]Take me to the place I [E]love
+          [F#m]Take me all the [E]way
+      - name: "Bridge"
+        type: bridge
+        lyrics: |
+          [A]Under the bridge down[Am]town
+          [E]Is where I drew some blood
+          [A]Under the bridge down[Am]town
+          [E]I could not get enough
+          [A]Under the bridge down[Am]town
+          [E]Forgot about my love
+          [A]Under the bridge down[Am]town
+          [E]I gave my life away
+        drummer: "Big dynamic shift. Tribal feel, heavy toms. Build to climax."
+      - name: "Outro"
+        type: outro
+        chords: "A  Am  E (repeat and fade)"
+        drummer: "Ride out. Gradual decrescendo."
+
+  - title: "Don't Look Back in Anger"
+    artist: "Oasis"
+    slug: "dont-look-back-in-anger"
+    key: "C major"
+    tempo: 82
+    sections:
+      - name: "Intro"
+        type: intro
+        chords: "C  F  C  F"
+        tabs:
+          lead: |
+            e|--0---1---0---1--|
+            B|--1---1---1---1--|
+            G|--0---2---0---2--|
+            D|--2---3---2---3--|
+            A|--3---3---3---3--|
+            E|----------------|
+        drummer: "No drums in piano intro. Enter at verse."
+      - name: "Verse 1"
+        type: verse
+        lyrics: |
+          [C]Slip inside the [G]eye of your [Am]mind
+          Don't you [E]know you might [F]find
+          [G]A better place to [C]play [Am G]
+          [C]You said that [G]you'd never [Am]been
+          But all the [E]things that you've [F]seen
+          [G]Slowly fade a[C]way [Am G]
+        drummer: "Steady 8th note hi-hat. Kick on 1, snare on 2 and 4."
+      - name: "Pre-Chorus"
+        type: bridge
+        lyrics: |
+          [F]So I start a revo[Fm]lution from my [C]bed
+          Cause you [F]said the brains I [Fm]had went to my [C]head
+          [F]Step outside, [Fm]summertime's in [C]bloom
+          [G]Stand up beside the fireplace
+          [E]Take that look from off your face
+          You ain't ever gonna burn my [Am]heart out[G]
+        drummer: "Build through pre-chorus. Open hi-hat on the E chord."
+      - name: "Chorus"
+        type: chorus
+        lyrics: |
+          [C]So [G]Sally can [Am]wait
+          She [E]knows it's too [F]late
+          As we're [G]walking on [C]by [Am G]
+          [C]Her [G]soul [Am]slides away
+          [E]But don't look [F]back in anger
+          [G]I heard you [C]say [Am G]
+        drummer: "Driving beat. Crash on downbeat of chorus."
+      - name: "Verse 2"
+        type: verse
+        lyrics: |
+          [C]Take me to the [G]place where you [Am]go
+          Where [E]nobody [F]knows
+          [G]If it's night or [C]day [Am G]
+          [C]Please don't put your [G]life in the [Am]hands
+          Of a [E]rock and roll [F]band
+          [G]Who'll throw it all a[C]way [Am G]
+      - name: "Pre-Chorus 2"
+        type: bridge
+        lyrics: |
+          [F]So I start a revo[Fm]lution from my [C]bed
+          Cause you [F]said the brains I [Fm]had went to my [C]head
+          [F]Step outside, [Fm]summertime's in [C]bloom
+          [G]Stand up beside the fireplace
+          [E]Take that look from off your face
+          Cause you ain't ever gonna burn my [Am]heart out[G]
+      - name: "Chorus 2"
+        type: chorus
+        lyrics: |
+          [C]So [G]Sally can [Am]wait
+          She [E]knows it's too [F]late
+          As she's [G]walking on [C]by [Am G]
+          [C]Her [G]soul [Am]slides away
+          [E]But don't look [F]back in anger
+          [G]I heard you [C]say [Am G]
+      - name: "Solo"
+        type: solo
+        chords: "C  G  Am  E  F  G  C  Am G"
+        drummer: "Same as chorus pattern. Keep steady."
+      - name: "Final Chorus"
+        type: chorus
+        lyrics: |
+          [C]So [G]Sally can [Am]wait
+          She [E]knows it's too [F]late
+          As we're [G]walking on [C]by [Am G]
+          [C]Her [G]soul [Am]slides away
+          [E]But don't look [F]back in anger
+          Don't look [G]back in anger
+          I heard you [C]say [Am G]
+      - name: "Outro"
+        type: outro
+        lyrics: |
+          [C]At least not [G]today [Am  G  C]
+
+  - title: "Little Wing"
+    artist: "Jimi Hendrix"
+    slug: "little-wing"
+    key: "Em"
+    tempo: 66
+    sections:
+      - name: "Intro / Verse"
+        type: verse
+        lyrics: |
+          [Em]Well she's walking [G]through the clouds
+          With a [Am]circus mind that's [Em]running wild
+          [Bm]Butterflies and [Bb]zebras and [Am]moonbeams
+          And [C]fairy[G]tales [F(add9)]  [C]  [D]
+        tabs:
+          lead: |
+            e|--0--------3--------0--------0--------|
+            B|--0--0h3p0-0--------1--------0--------|
+            G|--0--------0--------2--------0--------|
+            D|--2--------0--------2--------2--------|
+            A|--2--------2--------0--------2--------|
+            E|--0--------3-----------------0--------|
+        drummer: "Very loose feel. Light ride, ghost notes. Follow the guitar dynamics."
+      - name: "Verse 2"
+        type: verse
+        lyrics: |
+          [Em]That's all she [G]ever thinks about
+          [Am]Riding with the [Em]wind
+          [Bm]When I'm sad [Bb]she comes to [Am]me
+          With a [C]thousand [G]smiles she [F(add9)]gives to me [C]free [D]
+      - name: "Verse 3"
+        type: verse
+        lyrics: |
+          [Em]It's alright she [G]said, it's alright
+          [Am]Take anything you [Em]want from me
+          [Bm]Anything [Bb]
+          [Am]Anything [C]  [G]  [F(add9)]  [C]  [D]
+      - name: "Solo"
+        type: solo
+        chords: "Em  G  Am  Em  Bm  Bb  Am  C  G  F(add9)  C  D"
+        drummer: "Open up. Ride cymbal, heavier kick. Follow Hendrix dynamics."
+      - name: "Outro"
+        type: outro
+        chords: "Em (fade with solo)"
+        drummer: "Ride out with the solo. Gradual fade."
+
+  - title: "Ohio"
+    artist: "Crosby, Stills, Nash & Young"
+    slug: "ohio"
+    key: "Dm"
+    tempo: 104
+    sections:
+      - name: "Intro"
+        type: intro
+        chords: "Dm  Gm (heavy riff)"
+        tabs:
+          lead: |
+            e|----------------------------------|
+            B|----------------------------------|
+            G|--7--7--7--7---5--5--5--5---------|
+            D|--7--7--7--7---5--5--5--5---------|
+            A|--5--5--5--5---5--5--5--5---------|
+            E|----------------3--3--3--3--------|
+        drummer: "Driving rock beat. Hard snare on 2 and 4. Open hi-hat."
+      - name: "Verse 1"
+        type: verse
+        lyrics: |
+          [Dm]Tin soldiers and Nixon [C]coming
+          [Dm]We're finally on our [C]own
+          [Dm]This summer I hear the [C]drumming
+          [Dm]Four dead in O-hi-[C]o
+        drummer: "Tight, driving groove. Keep intensity."
+      - name: "Chorus"
+        type: chorus
+        lyrics: |
+          [F]Gotta get down to it
+          [C]Soldiers are cutting us down
+          [Dm]Should have been done long a[C]go
+          [F]What if you knew her and
+          [C]Found her dead on the ground
+          [Dm]How can you run when you [C]know
+        drummer: "Crashes on F chord. Drive through the chorus."
+      - name: "Interlude"
+        type: solo
+        chords: "Dm  Gm (riff repeats)"
+        drummer: "Back to intro pattern."
+      - name: "Verse 2"
+        type: verse
+        lyrics: |
+          [Dm]Tin soldiers and Nixon [C]coming
+          [Dm]We're finally on our [C]own
+          [Dm]This summer I hear the [C]drumming
+          [Dm]Four dead in O-hi-[C]o
+      - name: "Chorus 2"
+        type: chorus
+        lyrics: |
+          [F]Gotta get down to it
+          [C]Soldiers are cutting us down
+          [Dm]Should have been done long a[C]go
+          [F]What if you knew her and
+          [C]Found her dead on the ground
+          [Dm]How can you run when you [C]know
+      - name: "Outro"
+        type: outro
+        lyrics: |
+          [Dm]Four dead in O-hi-[C]o
+          [Dm]Four dead in O-hi-[C]o
+          [Dm]Four dead in O-hi-[C]o (repeat and fade)
+        drummer: "Ride out. Neil Young solo over the top."
+
+  - title: "Santeria"
+    artist: "Sublime"
+    slug: "santeria"
+    key: "E major"
+    tempo: 90
+    sections:
+      - name: "Intro"
+        type: intro
+        chords: "E  G#  C#m  B  A  B  E  B"
+        drummer: "Ska/reggae offbeat feel. Rim click on 2 and 4."
+      - name: "Verse 1"
+        type: verse
+        lyrics: |
+          [E]I don't practice Sante[G#]ria
+          I ain't got no [C#m]crystal [B]ball
+          Well I [A]had a million dollars but I'd
+          [B]I'd spend it all [E]  [B]
+          [E]If I could find that [G#]Heina
+          And that [C#m]Sancho that she's [B]found
+          Well I'd [A]pop a cap in Sancho and I'd
+          [B]Slap her down [E]  [B]
+        drummer: "Offbeat hi-hat. Kick on 1, rim click on 2 and 4."
+      - name: "Chorus"
+        type: chorus
+        lyrics: |
+          [A]What I really want to [B]know
+          My [E]baby [B]
+          [A]What I really want to [B]say
+          I can't de[C#m]fine [B]
+          [A]Well it's [B]love that I [E]need [B]
+        drummer: "Open up to full beat. Crash on downbeat."
+      - name: "Verse 2"
+        type: verse
+        lyrics: |
+          [E]My soul will have to [G#]wait
+          Till I get [C#m]back, find a [B]Heina of my own
+          [A]Daddy's gonna love one and all
+          [B]I feel the break, feel the [E]break [B]
+          [E]Feel the break and I [G#]gotta live it up
+          [C#m]Oh yeah, well I [B]swear that I
+          [A]What I really want to know [B]ah baby
+          [E]What I really want to [B]say
+        drummer: "Same offbeat pattern. Stay in the pocket."
+      - name: "Chorus 2"
+        type: chorus
+        lyrics: |
+          [A]What I really want to [B]know
+          My [E]baby [B]
+          [A]What I really want to [B]say
+          I can't de[C#m]fine [B]
+          [A]Got [B]love, make it [E]go [B]
+      - name: "Solo"
+        type: solo
+        chords: "E  G#  C#m  B  A  B  E  B"
+        tabs:
+          lead: |
+            e|--12--12b14--12--9--12--9--7--9--7--9--7--|
+            B|---------------------------------------------|
+            G|---------------------------------------------|
+            D|---------------------------------------------|
+            A|---------------------------------------------|
+            E|---------------------------------------------|
+        drummer: "Keep the groove. Don't overplay during solo."
+      - name: "Verse 3"
+        type: verse
+        lyrics: |
+          [E]Tell Sanchito that if [G#]he knows what is good for him
+          He [C#m]best go run and [B]hide
+          [A]Daddy's got a new .45
+          [B]And I won't think [E]twice [B]
+          To [E]stick that barrel straight down [G#]Sancho's throat
+          Be[C#m]lieve me when I [B]say that I [A]got somethin' for his
+          [B]Punk ass [E]  [B]
+      - name: "Final Chorus"
+        type: chorus
+        lyrics: |
+          [A]What I really want to [B]know
+          My [E]baby [B]
+          [A]What I really want to [B]say
+          My [C#m]baby [B]
+          [A]What I really want to [B]say
+          Is I've got [E]mine [B]
+          And I'll make it
+          [A]Yes I'm [B]coming [E]up
+        drummer: "Build to finish. Big ending."
+      - name: "Outro"
+        type: outro
+        lyrics: |
+          [A]Tell Sanchito that if [B]he knows what is good for him
+          He [E]best go run and hide
+        drummer: "End clean. Stop together."
+
+  - title: "Everlong"
+    artist: "Foo Fighters"
+    slug: "everlong"
+    key: "D major"
+    tempo: 158
+    tuning: "Drop D"
+    sections:
+      - name: "Intro"
+        type: intro
+        chords: "D  Bm  G  Bm (arpeggiated)"
+        tabs:
+          lead: |
+            e|-----------7-----------7-----------7-----------7--|
+            B|-------7-------7---7-------7---3-------3---7------|
+            G|---7-------7-------7-------7-------4-------7------|
+            D|-0---0---0---0---9---9---9---9---5---5---9---9----|
+            A|------------------------------------------------------|
+            D|------------------------------------------------------|
+        drummer: "No drums in intro. Enter at verse with driving beat."
+      - name: "Verse 1"
+        type: verse
+        lyrics: |
+          [D]Hello, I've waited here for [Bm]you
+          [G]Everlong
+          [D]Tonight I throw myself in[Bm]to
+          [G]Out of the red
+          Out of her head she sang
+        drummer: "Fast driving 8ths on hi-hat. Kick pattern follows guitar rhythm."
+      - name: "Pre-Chorus"
+        type: bridge
+        lyrics: |
+          [Bm]Come [G]down and waste away with [D]me
+          [Bm]Down [G]with me
+        drummer: "Build intensity. Open hi-hat."
+      - name: "Chorus"
+        type: chorus
+        lyrics: |
+          [Bm]Slow how [G]you wanted it to [D]be
+          I'm over my [Bm]head, out of her [G]head she sang
+          [D]
+          And I wonder
+          When I sing along with [Bm]you
+          [G]If everything could ever feel this real forever
+          [D]If anything could ever be this good again
+        drummer: "Full out. Crash on downbeats. Driving 8ths. Quarter note kick."
+      - name: "Verse 2"
+        type: verse
+        lyrics: |
+          [D]The only thing I'll ever [Bm]ask of you
+          [G]You gotta promise not to stop when I say when
+          [D]She sang
+          [D]Breathe out so I can breathe you [Bm]in
+          [G]Hold you in
+      - name: "Pre-Chorus 2"
+        type: bridge
+        lyrics: |
+          [Bm]Come [G]down and waste away with [D]me
+          [Bm]Down [G]with me
+      - name: "Chorus 2"
+        type: chorus
+        lyrics: |
+          [Bm]Slow how [G]you wanted it to [D]be
+          I'm over my [Bm]head, out of her [G]head she sang
+          [D]
+          And I wonder
+          When I sing along with [Bm]you
+          [G]If everything could ever feel this real forever
+          [D]If anything could ever be this good again
+      - name: "Bridge"
+        type: bridge
+        lyrics: |
+          [Bm]And I wonder [G]
+          [D]If everything could ever feel this real forever
+          [Bm]If anything could ever [G]be this good again
+        drummer: "Drop to half time. Build back up."
+      - name: "Final Chorus"
+        type: chorus
+        lyrics: |
+          [D]The only thing I'll ever [Bm]ask of you
+          [G]You gotta promise not to stop when I say when
+        drummer: "All out to the end."
+      - name: "Outro"
+        type: outro
+        chords: "D  Bm  G (slow down)"
+        drummer: "Ritardando. End clean."
+
+  - title: "Creep"
+    artist: "Radiohead"
+    slug: "creep"
+    key: "G major"
+    tempo: 92
+    sections:
+      - name: "Intro"
+        type: intro
+        chords: "G  B  C  Cm"
+        tabs:
+          rhythm: |
+            (Clean arpeggiated chords)
+            G:  320033
+            B:  x24442
+            C:  x32010
+            Cm: x35543
+        drummer: "No drums in intro. Light shaker or nothing."
+      - name: "Verse 1"
+        type: verse
+        lyrics: |
+          [G]When you were here be[B]fore
+          Couldn't look you in the [C]eye
+          You're just like an [Cm]angel
+          [G]Your skin makes me [B]cry
+          You float like a [C]feather
+          In a beautiful [Cm]world
+          [G]I wish I was [B]special
+          [C]You're so fuckin' [Cm]special
+        drummer: "Enter lightly at verse start. Build through to chorus."
+      - name: "Chorus"
+        type: chorus
+        lyrics: |
+          [G]But I'm a [B]creep
+          I'm a [C]weirdo
+          [Cm]What the hell am I doing here
+          [G]I don't be[B]long here
+          [C]  [Cm]
+        tabs:
+          lead: |
+            (Crunch guitar enters with power chord hits on B and G)
+        drummer: "Full beat. Crash on 'creep'. Drive the chorus."
+      - name: "Verse 2"
+        type: verse
+        lyrics: |
+          [G]I don't care if it [B]hurts
+          I want to have [C]control
+          I want a perfect [Cm]body
+          [G]I want a perfect [B]soul
+          I want you to [C]notice
+          When I'm not [Cm]around
+          [G]You're so fuckin' [B]special
+          [C]I wish I was [Cm]special
+        drummer: "Pull back for verse. Ghost notes on snare."
+      - name: "Chorus 2"
+        type: chorus
+        lyrics: |
+          [G]But I'm a [B]creep
+          I'm a [C]weirdo
+          [Cm]What the hell am I doing here
+          [G]I don't be[B]long here
+          [C]Oh oh [Cm]oh
+      - name: "Bridge"
+        type: bridge
+        lyrics: |
+          [G]She's [B]running out the [C]door
+          She's [Cm]running out
+          She [G]run, run, [B]run
+          [C]Run [Cm]
+          [G]  [B]  [C]  [Cm]
+        drummer: "Big build. Riding crashes. All out."
+      - name: "Final Verse"
+        type: verse
+        lyrics: |
+          [G]Whatever makes you [B]happy
+          Whatever you [C]want
+          You're so fuckin' [Cm]special
+          [G]I wish I was [B]special
+        drummer: "Soft again. Follow dynamics."
+      - name: "Outro"
+        type: outro
+        lyrics: |
+          [C]But I'm a [Cm]creep
+          [G]I don't belong [B]here
+          [C]  [Cm]
+          [G]I don't belong here
+        drummer: "Fade out. Very gentle."
+
+  - title: "Where Is My Mind"
+    artist: "Pixies"
+    slug: "where-is-my-mind"
+    key: "E major"
+    tempo: 84
+    sections:
+      - name: "Intro"
+        type: intro
+        chords: "E  C#m  G#  A (x2)"
+        tabs:
+          lead: |
+            e|--12-12--12--12-12--12--12-12--12--12-12--12--|
+            B|--12-12--12--12-12--12--13-13--13--12-12--12--|
+            G|--13-13--13--11-11--11--13-13--13--14-14--14--|
+            D|----------------------------------------------|
+            A|----------------------------------------------|
+            E|----------------------------------------------|
+        drummer: "Light ride cymbal. Very understated."
+      - name: "Verse 1"
+        type: verse
+        lyrics: |
+          [E]Ooh [C#m]
+          [G#]Stop [A]
+          [E]With your feet on the air and your [C#m]head on the ground
+          [G#]Try this trick and [A]spin it, yeah
+          [E]Your head will col[C#m]lapse
+          If there's [G#]nothing in [A]it
+          And you'll ask your[E]self
+        drummer: "Steady beat. Kick on 1 and 3. Snare on 2 and 4."
+      - name: "Chorus"
+        type: chorus
+        lyrics: |
+          [E]Where is my [C#m]mind
+          [G#]Where is my [A]mind
+          [E]Where is my [C#m]mind
+          [G#]  [A]
+        drummer: "Open hi-hat. Slightly louder."
+      - name: "Verse 2"
+        type: verse
+        lyrics: |
+          [E]Way out in the [C#m]water
+          See it [G#]swimmin' [A]
+          [E]I was swimmin' in the [C#m]Caribbean
+          [G#]Animals were [A]hiding behind the rocks
+          [E]Except the little [C#m]fish
+          But they [G#]told me he [A]swears
+          Tryin' to talk to [E]me, to me, to me
+      - name: "Chorus 2"
+        type: chorus
+        lyrics: |
+          [E]Where is my [C#m]mind
+          [G#]Where is my [A]mind
+          [E]Where is my [C#m]mind
+          [G#]  [A]
+      - name: "Verse 3"
+        type: verse
+        lyrics: |
+          [E]With your feet on the air and your [C#m]head on the ground
+          [G#]Try this trick and [A]spin it, yeah
+          [E]Your head will col[C#m]lapse
+          If there's [G#]nothing in [A]it
+          And you'll ask your[E]self
+      - name: "Final Chorus"
+        type: chorus
+        lyrics: |
+          [E]Where is my [C#m]mind
+          [G#]Where is my [A]mind
+          [E]Where is my [C#m]mind
+          [G#]  [A]
+      - name: "Outro"
+        type: outro
+        chords: "E  C#m  G#  A (with intro riff, fade)"
+        drummer: "Ride out with intro pattern. Fade."
