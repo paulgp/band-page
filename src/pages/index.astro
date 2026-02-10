@@ -1,17 +1,72 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import songs from '../data/songs.yaml';
 
+const baseUrl = import.meta.env.BASE_URL;
 ---
+<Layout title="Songs">
+  <h1>Songbook</h1>
+  <div class="song-list">
+    {songs.songs.map((song, i) => (
+      <a href={`${baseUrl}songs/${song.slug}/`} class="song-card">
+        <span class="song-number">{i + 1}</span>
+        <div>
+          <span class="song-title">{song.title}</span>
+          <span class="song-artist">{song.artist}</span>
+        </div>
+        <div class="song-meta">
+          {song.key && <span>{song.key}</span>}
+          {song.tempo && <span>{song.tempo} BPM</span>}
+        </div>
+      </a>
+    ))}
+  </div>
+</Layout>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<style>
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .song-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .song-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1.25rem;
+    background: var(--bg-surface);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.15s;
+  }
+  .song-card:hover {
+    background: var(--bg-section);
+  }
+  .song-number {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    min-width: 1.5rem;
+  }
+  .song-title {
+    display: block;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .song-artist {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+  .song-meta {
+    margin-left: auto;
+    display: flex;
+    gap: 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+  }
+</style>

@@ -1,0 +1,73 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SongSection from '../../components/SongSection.astro';
+import songs from '../../data/songs.yaml';
+
+export function getStaticPaths() {
+  return songs.songs.map(song => ({
+    params: { slug: song.slug },
+    props: { song },
+  }));
+}
+
+const { song } = Astro.props;
+---
+<Layout title={song.title}>
+  <div class="song-header">
+    <h1>{song.title}</h1>
+    <p class="artist">{song.artist}</p>
+    <div class="meta">
+      {song.key && <span class="meta-tag">Key: {song.key}</span>}
+      {song.tempo && <span class="meta-tag">{song.tempo} BPM</span>}
+      {song.tuning && <span class="meta-tag">{song.tuning}</span>}
+    </div>
+  </div>
+
+  <div class="song-body">
+    {song.sections.map(section => (
+      <SongSection section={section} />
+    ))}
+  </div>
+</Layout>
+
+<style>
+  .song-header {
+    margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.15rem;
+  }
+  .artist {
+    color: var(--text-muted);
+    font-size: 1rem;
+  }
+  .meta {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .meta-tag {
+    background: var(--bg-surface);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+  .song-body {
+    columns: 2;
+    column-gap: 2.5rem;
+  }
+  @media (max-width: 900px) {
+    .song-body {
+      columns: 1;
+    }
+  }
+  @media print {
+    .song-body {
+      columns: 2;
+    }
+    h1 { font-size: 1.3rem; }
+  }
+</style>
