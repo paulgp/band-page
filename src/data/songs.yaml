@@ -9,14 +9,6 @@ songs:
       - name: "Intro"
         type: intro
         chords: "C#m  G#  A  E (x4)"
-        tabs:
-          lead: |
-            e|---4-----------4----------0-----------0----------|
-            B|---4h5-5--x----5----------0-----------0----------|
-            G|---4----4--x---6----------1-----------1----------|
-            D|---4h6-----x---6----------2-----------2----------|
-            A|---4----------6-----------2-----------2----------|
-            E|--------4-----4-----------0-----------0----------|
         drummer: "Count in. Soft hi-hat, kick on 1 and 3. Build gradually."
       - name: "Verse 1"
         type: verse
@@ -80,14 +72,6 @@ songs:
       - name: "Solo"
         type: solo
         chords: "C#m  G#  A  E (x4)"
-        tabs:
-          lead: |
-            e|--12b14-12--9--12b14-12--9--12b14-12--9--7--9--7--|
-            B|--------------------------------------10----------|
-            G|-------------------------------------------------|
-            D|-------------------------------------------------|
-            A|-------------------------------------------------|
-            E|-------------------------------------------------|
         drummer: "Full open hats, driving. Crash accents on chord changes."
       - name: "Final Chorus"
         type: chorus
@@ -115,14 +99,6 @@ songs:
       - name: "Intro"
         type: intro
         chords: "D  F#m  E (fingerpicked)"
-        tabs:
-          lead: |
-            e|--2---2---2---2---2---2---2---2--|
-            B|--3---3---3---3---2---2---0---0--|
-            G|--2---2---2---2---2---2---1---1--|
-            D|--0---0---0---0---4---4---2---2--|
-            A|-----------------4---4---2---2--|
-            E|-------------------------------0--|
         drummer: "No drums in intro. Enter softly at verse 1."
       - name: "Verse 1"
         type: verse
@@ -187,14 +163,6 @@ songs:
       - name: "Intro"
         type: intro
         chords: "C  F  C  F"
-        tabs:
-          lead: |
-            e|--0---1---0---1--|
-            B|--1---1---1---1--|
-            G|--0---2---0---2--|
-            D|--2---3---2---3--|
-            A|--3---3---3---3--|
-            E|----------------|
         drummer: "No drums in piano intro. Enter at verse."
       - name: "Verse 1"
         type: verse
@@ -285,14 +253,6 @@ songs:
           With a [Am]circus mind that's [Em]running wild
           [Bm]Butterflies and [Bb]zebras and [Am]moonbeams
           And [C]fairy[G]tales [F(add9)]  [C]  [D]
-        tabs:
-          lead: |
-            e|--0--------3--------0--------0--------|
-            B|--0--0h3p0-0--------1--------0--------|
-            G|--0--------0--------2--------0--------|
-            D|--2--------0--------2--------2--------|
-            A|--2--------2--------0--------2--------|
-            E|--0--------3-----------------0--------|
         drummer: "Very loose feel. Light ride, ghost notes. Follow the guitar dynamics."
       - name: "Verse 2"
         type: verse
@@ -326,14 +286,6 @@ songs:
       - name: "Intro"
         type: intro
         chords: "Dm  Gm (heavy riff)"
-        tabs:
-          lead: |
-            e|----------------------------------|
-            B|----------------------------------|
-            G|--7--7--7--7---5--5--5--5---------|
-            D|--7--7--7--7---5--5--5--5---------|
-            A|--5--5--5--5---5--5--5--5---------|
-            E|----------------3--3--3--3--------|
         drummer: "Driving rock beat. Hard snare on 2 and 4. Open hi-hat."
       - name: "Verse 1"
         type: verse
@@ -435,14 +387,6 @@ songs:
       - name: "Solo"
         type: solo
         chords: "E  G#  C#m  B  A  B  E  B"
-        tabs:
-          lead: |
-            e|--12--12b14--12--9--12--9--7--9--7--9--7--|
-            B|---------------------------------------------|
-            G|---------------------------------------------|
-            D|---------------------------------------------|
-            A|---------------------------------------------|
-            E|---------------------------------------------|
         drummer: "Keep the groove. Don't overplay during solo."
       - name: "Verse 3"
         type: verse
@@ -483,14 +427,6 @@ songs:
       - name: "Intro"
         type: intro
         chords: "D  Bm  G  Bm (arpeggiated)"
-        tabs:
-          lead: |
-            e|-----------7-----------7-----------7-----------7--|
-            B|-------7-------7---7-------7---3-------3---7------|
-            G|---7-------7-------7-------7-------4-------7------|
-            D|-0---0---0---0---9---9---9---9---5---5---9---9----|
-            A|------------------------------------------------------|
-            D|------------------------------------------------------|
         drummer: "No drums in intro. Enter at verse with driving beat."
       - name: "Verse 1"
         type: verse
@@ -568,13 +504,6 @@ songs:
       - name: "Intro"
         type: intro
         chords: "G  B  C  Cm"
-        tabs:
-          rhythm: |
-            (Clean arpeggiated chords)
-            G:  320033
-            B:  x24442
-            C:  x32010
-            Cm: x35543
         drummer: "No drums in intro. Light shaker or nothing."
       - name: "Verse 1"
         type: verse
@@ -596,9 +525,6 @@ songs:
           [Cm]What the hell am I doing here
           [G]I don't be[B]long here
           [C]  [Cm]
-        tabs:
-          lead: |
-            (Crunch guitar enters with power chord hits on B and G)
         drummer: "Full beat. Crash on 'creep'. Drive the chorus."
       - name: "Verse 2"
         type: verse
@@ -655,14 +581,6 @@ songs:
       - name: "Intro"
         type: intro
         chords: "E  C#m  G#  A (x2)"
-        tabs:
-          lead: |
-            e|--12-12--12--12-12--12--12-12--12--12-12--12--|
-            B|--12-12--12--12-12--12--13-13--13--12-12--12--|
-            G|--13-13--13--11-11--11--13-13--13--14-14--14--|
-            D|----------------------------------------------|
-            A|----------------------------------------------|
-            E|----------------------------------------------|
         drummer: "Light ride cymbal. Very understated."
       - name: "Verse 1"
         type: verse
