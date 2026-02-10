@@ -150,6 +150,7 @@ songs:
     slug: "under-the-bridge"
     key: "E major"
     tempo: 68
+    audio: "https://www.youtube.com/watch?v=GLvohMXgcBo"
     sections:
       - name: "Intro"
         type: intro
@@ -230,6 +231,7 @@ songs:
     slug: "dont-look-back-in-anger"
     key: "C major"
     tempo: 82
+    audio: "https://www.youtube.com/watch?v=r8OipmKFDeM"
     sections:
       - name: "Intro"
         type: intro
@@ -363,6 +365,7 @@ songs:
     slug: "little-wing"
     key: "Em"
     tempo: 66
+    audio: "https://www.youtube.com/watch?v=35luFxHO5E0"
     sections:
       - name: "Intro / Verse"
         type: verse
@@ -452,6 +455,7 @@ songs:
     slug: "ohio"
     key: "Dm"
     tempo: 104
+    audio: "https://www.youtube.com/watch?v=JCS-g3HwXdc"
     sections:
       - name: "Intro"
         type: intro
@@ -518,6 +522,7 @@ songs:
     slug: "santeria"
     key: "E major"
     tempo: 90
+    audio: "https://www.youtube.com/watch?v=AEYN5w4T_aM"
     sections:
       - name: "Intro"
         type: intro
@@ -641,6 +646,7 @@ songs:
     key: "D major"
     tempo: 158
     tuning: "Drop D"
+    audio: "https://www.youtube.com/watch?v=eBG7P-K-r1Y"
     sections:
       - name: "Intro"
         type: intro
@@ -735,6 +741,7 @@ songs:
     slug: "creep"
     key: "G major"
     tempo: 92
+    audio: "https://www.youtube.com/watch?v=XFkzRNyygfk"
     sections:
       - name: "Intro"
         type: intro
@@ -823,6 +830,7 @@ songs:
     slug: "where-is-my-mind"
     key: "E major"
     tempo: 84
+    audio: "https://www.youtube.com/watch?v=OJ62RzJkYUo"
     sections:
       - name: "Intro"
         type: intro
