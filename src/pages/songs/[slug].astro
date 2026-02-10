@@ -20,6 +20,7 @@ const { song } = Astro.props;
       {song.key && <span class="meta-tag">Key: {song.key}</span>}
       {song.tempo && <span class="meta-tag">{song.tempo} BPM</span>}
       {song.tuning && <span class="meta-tag">{song.tuning}</span>}
+      <button class="chord-toggle meta-tag" id="chord-toggle">Hide Chords</button>
     </div>
   </div>
 
@@ -55,6 +56,14 @@ const { song } = Astro.props;
     font-size: 0.8rem;
     color: var(--text-muted);
   }
+  .chord-toggle {
+    cursor: pointer;
+    border: 1px solid var(--text-muted);
+    font-family: inherit;
+  }
+  .chord-toggle:hover {
+    background: var(--bg-section);
+  }
   .song-body {
     columns: 2;
     column-gap: 2.5rem;
@@ -71,3 +80,26 @@ const { song } = Astro.props;
     h1 { font-size: 1.3rem; }
   }
 </style>
+
+<style is:global>
+  .hide-chords .chord {
+    display: none;
+  }
+  .hide-chords .segment {
+    display: inline;
+  }
+  .hide-chords .chord-lyric-line {
+    display: block;
+    line-height: 1.4;
+  }
+</style>
+
+<script>
+  const btn = document.getElementById('chord-toggle');
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('hide-chords');
+    btn.textContent = document.body.classList.contains('hide-chords')
+      ? 'Show Chords'
+      : 'Hide Chords';
+  });
+</script>
