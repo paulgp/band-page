@@ -6,8 +6,13 @@ import DrummerNotes from './DrummerNotes.astro';
 const { section } = Astro.props;
 const lines = section.lyrics ? section.lyrics.trim().split('\n') : [];
 const accentVar = `var(--accent-${section.type || 'verse'})`;
+const hasTimestamp = section.timestamp != null;
 ---
-<div class="song-section" style={`border-left-color: ${accentVar}`}>
+<div
+  class:list={["song-section", { clickable: hasTimestamp }]}
+  style={`border-left-color: ${accentVar}`}
+  {...(hasTimestamp ? { "data-timestamp": String(section.timestamp), "data-section-name": section.name } : {})}
+>
   <h3 class="section-name" style={`color: ${accentVar}`}>{section.name}</h3>
 
   {section.chords && !section.lyrics && (
@@ -28,6 +33,14 @@ const accentVar = `var(--accent-${section.type || 'verse'})`;
     padding-left: 1rem;
     margin-bottom: 1.25rem;
     break-inside: avoid;
+    transition: all 0.3s ease;
+  }
+  .song-section.clickable {
+    cursor: pointer;
+  }
+  .song-section.clickable:hover {
+    background: #ffffff08;
+    border-radius: 0 6px 6px 0;
   }
   .section-name {
     font-size: 0.75rem;

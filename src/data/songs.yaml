@@ -5,8 +5,10 @@ songs:
     key: "C#m"
     tempo: 76
     tuning: "Eb standard (half step down)"
+    audio: "https://www.youtube.com/watch?v=ENXvZ9YRjbo"
     sections:
       - name: "Intro"
+        timestamp: 0
         type: intro
         chords: "C#m  G#  A  E (x4)"
         tabs:
@@ -20,6 +22,7 @@ songs:
             E|------------------|4-----------4-----|------------------|0-----------0-----|
         drummer: "Count in. Soft hi-hat, kick on 1 and 3. Build gradually."
       - name: "Verse 1"
+        timestamp: 19
         type: verse
         lyrics: |
           [C#m]Somebody's Heine is [G#]crowding my icebox
@@ -28,6 +31,7 @@ songs:
           [A]  [E]
         drummer: "Steady hi-hat 8ths, kick on 1 and 3, snare on 2 and 4"
       - name: "Verse 2"
+        timestamp: 35
         type: verse
         lyrics: |
           [C#m]Oh yeah [G#]
@@ -36,6 +40,7 @@ songs:
           [A]Inside [E]
         drummer: "Same pattern, slightly louder"
       - name: "Verse 3"
+        timestamp: 51
         type: verse
         lyrics: |
           [C#m]Flip on the tele, [G#]wrestle with Jimmy
@@ -43,6 +48,7 @@ songs:
           [C#m]The bottle is ready to [G#]blow
           [A]  [E]
       - name: "Chorus 1"
+        timestamp: 67
         type: chorus
         lyrics: |
           [C#m]Say it ain't [G#]so
@@ -51,6 +57,7 @@ songs:
           [A]My love is a [E]life taker
         drummer: "Open hi-hat, driving beat. Crash on 'Say it ain't so'"
       - name: "Verse 4"
+        timestamp: 89
         type: verse
         lyrics: |
           [C#m]I can't confront you, [G#]I never could do
@@ -60,6 +67,7 @@ songs:
           [C#m]So be cool [G#]
           [A]  [E]
       - name: "Chorus 2"
+        timestamp: 117
         type: chorus
         lyrics: |
           [C#m]Say it ain't [G#]so
@@ -67,6 +75,7 @@ songs:
           [C#m]Say it ain't [G#]so
           [A]My love is a [E]life taker
       - name: "Bridge"
+        timestamp: 138
         type: bridge
         lyrics: |
           [B]Dear Daddy, [B/A#]I write you
@@ -79,6 +88,7 @@ songs:
           [E]The son is drowning [G#]in the flood
         drummer: "Half-time feel. Heavy snare on 3. Build intensity through section."
       - name: "Solo"
+        timestamp: 180
         type: solo
         chords: "C#m  G#  A  E (x4)"
         tabs:
@@ -116,6 +126,7 @@ songs:
             E|-------------------------------|
         drummer: "Full open hats, driving. Crash accents on chord changes."
       - name: "Final Chorus"
+        timestamp: 211
         type: chorus
         lyrics: |
           [C#m]Say it ain't [G#]so
@@ -128,6 +139,7 @@ songs:
           [A]My love is a [E]life taker
         drummer: "All out. Crash on every chord change. Driving 8ths on kick."
       - name: "Outro"
+        timestamp: 243
         type: outro
         chords: "C#m  G#  A  E (fade out)"
         drummer: "Ride out with crashes. Follow guitar dynamics for ending."

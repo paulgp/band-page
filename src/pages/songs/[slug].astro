@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import SongSection from '../../components/SongSection.astro';
+import AudioPlayer from '../../components/AudioPlayer.astro';
 import songs from '../../data/songs.yaml';
 
 export function getStaticPaths() {
@@ -11,6 +12,8 @@ export function getStaticPaths() {
 }
 
 const { song } = Astro.props;
+const hasAudio = !!song.audio;
+const isYouTube = hasAudio && song.audio.includes('youtube.com');
 ---
 <Layout title={song.title}>
   <div class="song-header">
@@ -24,11 +27,13 @@ const { song } = Astro.props;
     </div>
   </div>
 
-  <div class="song-body">
+  <div class:list={["song-body", { "has-player": hasAudio }]}>
     {song.sections.map(section => (
       <SongSection section={section} />
     ))}
   </div>
+
+  {hasAudio && <AudioPlayer audio={song.audio} isYouTube={isYouTube} />}
 </Layout>
 
 <style>
@@ -68,6 +73,9 @@ const { song } = Astro.props;
     columns: 2;
     column-gap: 2.5rem;
   }
+  .song-body.has-player {
+    padding-bottom: 80px;
+  }
   @media (max-width: 900px) {
     .song-body {
       columns: 1;
@@ -76,6 +84,7 @@ const { song } = Astro.props;
   @media print {
     .song-body {
       columns: 2;
+      padding-bottom: 0;
     }
     h1 { font-size: 1.3rem; }
   }
@@ -92,6 +101,12 @@ const { song } = Astro.props;
     display: block;
     line-height: 1.4;
   }
+  .song-section.active {
+    background: #ffffff0c;
+    border-left-width: 5px;
+    border-radius: 0 6px 6px 0;
+    box-shadow: inset 3px 0 8px -2px currentColor;
+  }
 </style>
 
 <script>
@@ -102,4 +117,228 @@ const { song } = Astro.props;
       ? 'Show Chords'
       : 'Hide Chords';
   });
+</script>
+
+<script>
+  const playerEl = document.getElementById('audio-player');
+  if (playerEl) {
+    const audioSrc = playerEl.dataset.audio;
+    const audioType = playerEl.dataset.type;
+    const playBtn = document.getElementById('play-btn');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+    const progressBar = document.getElementById('progress-bar') as HTMLInputElement;
+    const timeCurrent = document.getElementById('time-current');
+    const timeDuration = document.getElementById('time-duration');
+    const sectionLabel = document.getElementById('section-label');
+
+    const sections = Array.from(document.querySelectorAll('[data-timestamp]'))
+      .map(el => ({
+        el: el as HTMLElement,
+        timestamp: parseFloat(el.getAttribute('data-timestamp')!),
+        name: el.getAttribute('data-section-name') || '',
+      }))
+      .sort((a, b) => a.timestamp - b.timestamp);
+
+    let isPlaying = false;
+    let currentSectionIdx = -1;
+    let userScrolled = false;
+    let scrollTimer: number | undefined;
+    let pollInterval: number | undefined;
+    let isSeeking = false;
+
+    // Unified player interface
+    let player = {
+      getCurrentTime: () => 0,
+      getDuration: () => 0,
+      seekTo: (_t: number) => {},
+      play: () => {},
+      pause: () => {},
+      isReady: false,
+    };
+
+    function formatTime(s: number): string {
+      const m = Math.floor(s / 60);
+      const sec = Math.floor(s % 60);
+      return `${m}:${sec.toString().padStart(2, '0')}`;
+    }
+
+    function updateIcons() {
+      iconPlay!.style.display = isPlaying ? 'none' : 'block';
+      iconPause!.style.display = isPlaying ? 'block' : 'none';
+    }
+
+    function updateProgress() {
+      if (!player.isReady || isSeeking) return;
+      const current = player.getCurrentTime();
+      const duration = player.getDuration();
+      if (duration > 0) {
+        progressBar!.value = String((current / duration) * 100);
+        timeCurrent!.textContent = formatTime(current);
+        timeDuration!.textContent = formatTime(duration);
+      }
+      // Find current section
+      let idx = -1;
+      for (let i = sections.length - 1; i >= 0; i--) {
+        if (current >= sections[i].timestamp) {
+          idx = i;
+          break;
+        }
+      }
+      if (idx !== currentSectionIdx) {
+        sections.forEach(s => s.el.classList.remove('active'));
+        if (idx >= 0) {
+          sections[idx].el.classList.add('active');
+          sectionLabel!.textContent = sections[idx].name;
+          if (!userScrolled) {
+            sections[idx].el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } else {
+          sectionLabel!.textContent = '';
+        }
+        currentSectionIdx = idx;
+      }
+    }
+
+    function startPolling() {
+      if (!pollInterval) {
+        pollInterval = window.setInterval(updateProgress, 250);
+      }
+    }
+
+    function stopPolling() {
+      if (pollInterval) {
+        clearInterval(pollInterval);
+        pollInterval = undefined;
+      }
+    }
+
+    // Track user scroll to suppress auto-scroll
+    window.addEventListener('scroll', () => {
+      userScrolled = true;
+      clearTimeout(scrollTimer);
+      scrollTimer = window.setTimeout(() => { userScrolled = false; }, 4000);
+    }, { passive: true });
+
+    // Progress bar interaction
+    progressBar!.addEventListener('input', () => {
+      isSeeking = true;
+      const duration = player.getDuration();
+      if (duration > 0) {
+        const t = (parseFloat(progressBar!.value) / 100) * duration;
+        timeCurrent!.textContent = formatTime(t);
+      }
+    });
+    progressBar!.addEventListener('change', () => {
+      const duration = player.getDuration();
+      if (duration > 0) {
+        const t = (parseFloat(progressBar!.value) / 100) * duration;
+        player.seekTo(t);
+      }
+      isSeeking = false;
+    });
+
+    // Section click-to-seek
+    sections.forEach(s => {
+      s.el.addEventListener('click', () => {
+        if (player.isReady) {
+          player.seekTo(s.timestamp);
+          if (!isPlaying) {
+            player.play();
+            isPlaying = true;
+            updateIcons();
+            startPolling();
+          }
+        }
+      });
+    });
+
+    // Play/pause button
+    playBtn!.addEventListener('click', () => {
+      if (!player.isReady) return;
+      if (isPlaying) {
+        player.pause();
+        isPlaying = false;
+        stopPolling();
+      } else {
+        player.play();
+        isPlaying = true;
+        startPolling();
+      }
+      updateIcons();
+    });
+
+    // Initialize based on audio type
+    if (audioType === 'youtube') {
+      // Extract video ID from YouTube URL
+      const url = new URL(audioSrc!);
+      const videoId = url.searchParams.get('v') || url.pathname.split('/').pop() || '';
+
+      // Load YouTube IFrame API
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(tag);
+
+      (window as any).onYouTubeIframeAPIReady = () => {
+        const yt = new (window as any).YT.Player('youtube-player', {
+          videoId,
+          playerVars: { autoplay: 0, controls: 0, modestbranding: 1 },
+          events: {
+            onReady: () => {
+              player = {
+                getCurrentTime: () => yt.getCurrentTime(),
+                getDuration: () => yt.getDuration(),
+                seekTo: (t: number) => yt.seekTo(t, true),
+                play: () => yt.playVideo(),
+                pause: () => yt.pauseVideo(),
+                isReady: true,
+              };
+              timeDuration!.textContent = formatTime(yt.getDuration());
+            },
+            onStateChange: (e: any) => {
+              const YT = (window as any).YT;
+              if (e.data === YT.PlayerState.PLAYING) {
+                isPlaying = true;
+                updateIcons();
+                startPolling();
+              } else if (e.data === YT.PlayerState.PAUSED || e.data === YT.PlayerState.ENDED) {
+                isPlaying = false;
+                updateIcons();
+                stopPolling();
+              }
+            },
+          },
+        });
+      };
+    } else {
+      // MP3 player
+      const audio = document.getElementById('mp3-player') as HTMLAudioElement;
+      audio.addEventListener('loadedmetadata', () => {
+        player = {
+          getCurrentTime: () => audio.currentTime,
+          getDuration: () => audio.duration,
+          seekTo: (t: number) => { audio.currentTime = t; },
+          play: () => audio.play(),
+          pause: () => audio.pause(),
+          isReady: true,
+        };
+        timeDuration!.textContent = formatTime(audio.duration);
+      });
+      audio.addEventListener('play', () => {
+        isPlaying = true;
+        updateIcons();
+        startPolling();
+      });
+      audio.addEventListener('pause', () => {
+        isPlaying = false;
+        updateIcons();
+        stopPolling();
+      });
+      audio.addEventListener('ended', () => {
+        isPlaying = false;
+        updateIcons();
+        stopPolling();
+      });
+    }
+  }
 </script>
