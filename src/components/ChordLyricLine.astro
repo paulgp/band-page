@@ -1,0 +1,38 @@
+---
+import { parseChordProLine } from '../utils/chordpro.js';
+
+const { line } = Astro.props;
+const segments = parseChordProLine(line);
+---
+<div class="chord-lyric-line">
+  {segments.map(seg => (
+    <span class="segment">
+      <span class="chord">{seg.chord || '\u00A0'}</span>
+      <span class="text">{seg.text || '\u00A0'}</span>
+    </span>
+  ))}
+</div>
+
+<style>
+  .chord-lyric-line {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.15rem;
+  }
+  .segment {
+    display: inline-flex;
+    flex-direction: column;
+    white-space: pre;
+  }
+  .chord {
+    color: var(--chord);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: bold;
+    min-height: 1.2em;
+  }
+  .text {
+    font-family: var(--font-lyrics);
+    font-size: 1rem;
+  }
+</style>

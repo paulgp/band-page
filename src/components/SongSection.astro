@@ -1,0 +1,43 @@
+---
+import ChordLyricLine from './ChordLyricLine.astro';
+import TabBlock from './TabBlock.astro';
+import DrummerNotes from './DrummerNotes.astro';
+
+const { section } = Astro.props;
+const lines = section.lyrics ? section.lyrics.trim().split('\n') : [];
+const accentVar = `var(--accent-${section.type || 'verse'})`;
+---
+<div class="song-section" style={`border-left-color: ${accentVar}`}>
+  <h3 class="section-name" style={`color: ${accentVar}`}>{section.name}</h3>
+
+  {section.chords && !section.lyrics && (
+    <p class="standalone-chords">{section.chords}</p>
+  )}
+
+  {lines.map(line => (
+    <ChordLyricLine line={line} />
+  ))}
+
+  {section.tabs && <TabBlock tabs={section.tabs} />}
+  {section.drummer && <DrummerNotes notes={section.drummer} />}
+</div>
+
+<style>
+  .song-section {
+    border-left: 3px solid;
+    padding-left: 1rem;
+    margin-bottom: 1.25rem;
+    break-inside: avoid;
+  }
+  .section-name {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.35rem;
+  }
+  .standalone-chords {
+    font-family: var(--font-mono);
+    color: var(--chord);
+    font-size: 0.9rem;
+  }
+</style>

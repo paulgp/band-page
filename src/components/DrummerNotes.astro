@@ -1,0 +1,29 @@
+---
+const { notes } = Astro.props;
+---
+{notes && (
+  <details class="drummer-notes">
+    <summary>Drummer</summary>
+    <p>{notes}</p>
+  </details>
+)}
+
+<style>
+  .drummer-notes {
+    margin-top: 0.5rem;
+    border-left: 2px solid var(--text-muted);
+    padding-left: 0.75rem;
+  }
+  summary {
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  p {
+    color: var(--text);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+  }
+</style>
