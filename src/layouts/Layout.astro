@@ -1,0 +1,85 @@
+---
+const { title } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | Band Songbook</title>
+  </head>
+  <body>
+    <nav class="top-nav">
+      <a href={baseUrl}>Songbook</a>
+    </nav>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+:root {
+  --bg: #1a1a2e;
+  --bg-surface: #16213e;
+  --bg-section: #0f3460;
+  --text: #e0e0e0;
+  --text-muted: #a0a0a0;
+  --chord: #e2b714;
+  --accent-verse: #2d6a4f;
+  --accent-chorus: #e76f51;
+  --accent-bridge: #6a4c93;
+  --accent-intro: #457b9d;
+  --accent-solo: #d4a373;
+  --accent-outro: #457b9d;
+  --font-lyrics: 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-lyrics);
+  line-height: 1.5;
+}
+
+.top-nav {
+  padding: 0.75rem 1.5rem;
+  background: var(--bg-surface);
+  border-bottom: 1px solid #ffffff10;
+}
+
+.top-nav a {
+  color: var(--chord);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+a {
+  color: var(--chord);
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  .top-nav {
+    display: none;
+  }
+}
+</style>
